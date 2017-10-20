@@ -1,4 +1,4 @@
-# collect-js-deps
+# yaml-cfn
 
 [![Build Status](https://travis-ci.org/gristlabs/yaml-cfn.svg?branch=master)](https://travis-ci.org/gristlabs/yaml-cfn)
 [![npm version](https://badge.fury.io/js/yaml-cfn.svg)](https://badge.fury.io/js/yaml-cfn)
