@@ -14,13 +14,13 @@ as of October 2017.
 
 ## Installation
 
-```
+```bash
 npm install --save-dev yaml-cfn
 ```
 
 ## Usage
 
-```
+```js
 const { yamlParse, yamlDump } = require('yaml-cfn');
 
 const input = `
@@ -42,7 +42,7 @@ assert.deepEqual(yamlParse(yamlDump(parsed)), parsed);
 
 The module uses [js-yaml](https://github.com/nodeca/js-yaml). The schema it uses is also exported,
 and may be used e.g. like so:
-```
+```js
 const { schema } = require('yaml-cfn');
 const yaml = require('js-yaml');
 yaml.safeLoad(input, { schema: schema })
