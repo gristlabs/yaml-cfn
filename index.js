@@ -23,7 +23,7 @@ function splitOne(str, sep) {
 
 /**
  * Returns true if obj is a representation of a CloudFormation intrinsic, i.e. an object with a
- * single property at key keyName. 
+ * single property at key keyName.
  */
 function checkType(obj, keyName) {
   return obj && typeof obj === 'object' && Object.keys(obj).length === 1 &&

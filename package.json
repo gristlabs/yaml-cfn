@@ -1,5 +1,5 @@
 {
-  "name": "yaml-schema-cfn",
+  "name": "yaml-cfn",
   "version": "0.1.0",
   "description": "Parser and schema for CloudFormation YAML template tags.",
   "scripts": {
@@ -8,7 +8,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gristlabs/yaml-schema-cfn.git"
+    "url": "git+https://github.com/gristlabs/yaml-cfn.git"
   },
   "keywords": [
     "yaml",
@@ -19,9 +19,9 @@
   "author": "Dmitry S, Grist Labs",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/gristlabs/yaml-schema-cfn/issues"
+    "url": "https://github.com/gristlabs/yaml-cfn/issues"
   },
-  "homepage": "https://github.com/gristlabs/yaml-schema-cfn#readme",
+  "homepage": "https://github.com/gristlabs/yaml-cfn#readme",
   "dependencies": {
     "js-yaml": "^3.10.0"
   },
