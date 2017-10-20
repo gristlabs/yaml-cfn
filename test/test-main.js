@@ -84,4 +84,22 @@ describe('yaml-schema', function() {
     const output = yamlParse(template);
     assert.deepEqual(output, {'foo': 'bar'});
   });
+
+  it("should handle the example from the README", function() {
+    const input = `
+    Key:
+    - !GetAtt Foo.Bar
+    - !Equals [!Ref Baz, "hello"]
+    `;
+
+    const parsed = {
+      "Key": [
+        {"Fn::GetAtt": ["Foo", "Bar"]},
+        {"Fn::Equals": [{"Ref": "Baz"}, "hello"]}
+      ]
+    };
+
+    assert.deepEqual(yamlParse(input), parsed);
+    assert.deepEqual(yamlParse(yamlDump(parsed)), parsed);
+  });
 });

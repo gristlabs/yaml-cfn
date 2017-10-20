@@ -31,13 +31,13 @@ Key:
 
 const parsed = {
   "Key": [
-    {"Fn::GetAtt", ["Foo": "Bar"]},
-    {"Fn::Equals", [{"Ref": "Baz", "hello"}]}
+    {"Fn::GetAtt": ["Foo", "Bar"]},
+    {"Fn::Equals": [{"Ref": "Baz"}, "hello"]}
   ]
 };
 
-assert.equal(yamlParse(input), parsed);
-assert.equal(yamlDump(parsed), input);
+assert.deepEqual(yamlParse(input), parsed);
+assert.deepEqual(yamlParse(yamlDump(parsed)), parsed);
 ```
 
 The module uses [js-yaml](https://github.com/nodeca/js-yaml). The schema it uses is also exported,
