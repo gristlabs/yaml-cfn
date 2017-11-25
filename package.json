@@ -6,6 +6,9 @@
     "test": "mocha -R list test/"
   },
   "main": "index.js",
+  "bin": {
+    "yaml-cfn": "cli.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gristlabs/yaml-cfn.git"
