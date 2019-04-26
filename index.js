@@ -70,6 +70,7 @@ function makeTagTypes(name) {
  */
 const supportedFunctions = [
   'Fn::Base64',
+  'Fn::Cidr',
   'Fn::FindInMap',
   'Fn::GetAtt',
   'Fn::GetAZs',
