@@ -79,6 +79,7 @@ const supportedFunctions = [
   'Fn::Select',
   'Fn::Split',
   'Fn::Sub',
+  'Fn::Transform',
   'Ref',
   'Condition',
   'Fn::And',
