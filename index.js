@@ -99,7 +99,7 @@ for (let name of supportedFunctions) {
  * The actual js-yaml schema, extending the DEFAULT_SAFE_SCHEMA.
  */
 const schema = new jsYaml.Schema({
-  include: [ jsYaml.DEFAULT_SAFE_SCHEMA ],
+  include: [ jsYaml.CORE_SCHEMA ],
   implicit: [],
   explicit: allTagTypes,
 });

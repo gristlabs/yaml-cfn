@@ -102,4 +102,22 @@ describe('yaml-schema', function() {
     assert.deepEqual(yamlParse(input), parsed);
     assert.deepEqual(yamlParse(yamlDump(parsed)), parsed);
   });
+
+  it("should parse date-like strings as strings", function() {
+    const input = `
+    Key:
+    - 2001-11-01
+    - '2001-11-02'
+    `;
+
+    const parsed = {
+      "Key": [
+        "2001-11-01",
+        "2001-11-02"
+      ]
+    };
+
+    assert.deepEqual(yamlParse(input), parsed);
+    assert.deepEqual(yamlParse(yamlDump(parsed)), parsed);
+  });
 });
