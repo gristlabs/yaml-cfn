@@ -1,6 +1,6 @@
 {
   "name": "yaml-cfn",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Parser and schema for CloudFormation YAML template tags.",
   "scripts": {
     "test": "mocha -R list test/"
