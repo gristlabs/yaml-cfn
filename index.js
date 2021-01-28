@@ -98,8 +98,7 @@ for (let name of supportedFunctions) {
 /**
  * The actual js-yaml schema, extending the DEFAULT_SAFE_SCHEMA.
  */
-const schema = new jsYaml.Schema({
-  include: [ jsYaml.CORE_SCHEMA ],
+const schema = jsYaml.CORE_SCHEMA.extend({
   implicit: [],
   explicit: allTagTypes,
 });
@@ -110,7 +109,7 @@ exports.schema = schema;
  * Convenience function to parse the given yaml input.
  */
 function yamlParse(input) {
-  return jsYaml.safeLoad(input, { schema: schema });
+  return jsYaml.load(input, { schema: schema });
 }
 exports.yamlParse = yamlParse;
 
@@ -119,6 +118,6 @@ exports.yamlParse = yamlParse;
  * Convenience function to serialize the given object to Yaml.
  */
 function yamlDump(input) {
-  return jsYaml.safeDump(input, { schema: schema });
+  return jsYaml.dump(input, { schema: schema });
 }
 exports.yamlDump = yamlDump;
