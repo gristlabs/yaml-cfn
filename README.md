@@ -1,6 +1,6 @@
 # yaml-cfn
 
-[![Build Status](https://travis-ci.org/gristlabs/yaml-cfn.svg?branch=master)](https://travis-ci.org/gristlabs/yaml-cfn)
+![CI](https://github.com/gristlabs/yaml-cfn/workflows/CI/badge.svg)
 [![npm version](https://badge.fury.io/js/yaml-cfn.svg)](https://badge.fury.io/js/yaml-cfn)
 
 > Parser and schema for CloudFormation YAML template tags.
