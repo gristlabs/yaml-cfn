@@ -86,11 +86,38 @@ const supportedFunctions = [
   'Fn::Equals',
   'Fn::If',
   'Fn::Not',
-  'Fn::Or',
+  'Fn::Or'
 ];
 
-let allTagTypes = [];
-for (let name of supportedFunctions) {
+/**
+ * This list is from
+ * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html
+ * This is not comprehensive, as it doesn't include
+ * - Supported Functions - https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#supported-rule-functions
+ * - Supported Attributes - https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-rules.html#rules-parameter-attributes
+ * Note that the Python version handles ANY tag that starts with ! in the same way (translating it
+ * to Fn:: prefix, but js-yaml requires listing tags explicitly.
+ */
+
+ const ruleFunctions = [
+  'Fn::And',
+  'Fn::Contains',
+  'Fn::EachMemberEquals',
+  'Fn::EachMemberIn',
+  'Fn::Equals',
+  'Fn::Not',
+  'Fn::Or',
+  'Fn::RefAll',
+  'Fn::ValueOf',
+  'Fn::ValueOfAll'
+]
+
+
+let allTagTypes = []
+let allFunctions = [...supportedFunctions, ...ruleFunctions]
+
+
+for (let name of allFunctions) {
   allTagTypes.push(...makeTagTypes(name));
 }
 
