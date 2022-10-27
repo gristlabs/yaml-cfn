@@ -19,6 +19,7 @@ describe('yaml-schema', function() {
       Key4: !Sub {"a": "1"}
       Key5: !GetAtt OneMore.Outputs.Arn
       Key6: !Condition OtherCondition
+      Key7: !EachMemberEquals 1
   `;
 
   const parsedYamlDict = {
@@ -45,6 +46,9 @@ describe('yaml-schema', function() {
       },
       "Key6": {
         "Condition": "OtherCondition"
+      },
+      "Key7": {
+        "Fn::EachMemberEquals": "1"
       }
     }
   };
