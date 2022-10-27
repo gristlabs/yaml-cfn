@@ -117,7 +117,6 @@ let allTagTypes = []
 let allFunctions = [...supportedFunctions, ...ruleFunctions]
 
 //console.log(supportedFunctions)
-console.log(allFunctions)
 
 for (let name of allFunctions) {
   allTagTypes.push(...makeTagTypes(name));
